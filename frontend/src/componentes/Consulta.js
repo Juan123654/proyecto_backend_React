@@ -16,6 +16,7 @@ function Consulta() {
         <button className="boton-consulta" type="submit" onClick={clic}>
           Consulta
         </button>
+        <h1>Otro</h1>
       </div>
     </div>
   );
