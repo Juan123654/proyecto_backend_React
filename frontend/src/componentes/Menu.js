@@ -5,16 +5,6 @@ function Menu() {
   return (
     <div className="menu">
       <div>
-        <Link>
-          <img
-            className="imagen"
-            to="/"
-            src={require("../img/logo192.png")}
-            alt="imagen 1"
-          />
-        </Link>
-      </div>
-      <div>
         <ul>
           <li>
             <Link className="item" to="/home">

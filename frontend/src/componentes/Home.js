@@ -6,9 +6,9 @@ function Home() {
       <p>Actividad Alternativa</p>
       <p>Juan Pablo Londoño Salinas</p>
       <p>Desarrollo de Aplicaciones Web NRC-50518</p>
-      <p>Semana 4</p>
+      <p>Semana 6</p>
       <p>Jonier Hernando Porras Duque </p>
-      <p>07/04/2024</p>
+      <p>22/04/2024</p>
     </div>
   );
 }

@@ -9,7 +9,6 @@ app.use(ex.static("frontend/build"))
 app.get('/', function(req, res){
 res.sendFile(dir_front + "/frontend/build/index.html")
 });
-
 app.get('/home', function(req, res){
     res.sendFile(dir_front + "/frontend/build/index.html")
 });
