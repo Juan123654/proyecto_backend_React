@@ -1,59 +1,93 @@
-.titulo-consulta{
-    position: absolute;
-    top: 250px;
-    text-align: center;
-    color:black;
+.titulo-consulta {
+  position: relative;
+  text-align: center;
+  color: black;
+  margin-top: 40px;
+  font-size: 24px;
+  font-size: 40px;
 }
-.contenedor-consulta{
-    width:500px;
-	padding:300px;
-	border-radius:10px;
-	margin:auto;
-	background-color:rgb(174, 189, 247);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+
+.contenedor-consulta {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(174, 189, 247);
+  text-align: center;
+  font-size: 20px;
 }
-.busqueda-actividades{
-    width:500px;
-	padding:10px;
-	border-radius:10px;
-	margin:auto;
-    display: flex;
-    position: absolute;
-    top: 300px;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+
+.busqueda-actividades {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
 }
-.input-consulta{
-    width:300px;
-    height: 50px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
-    font-size: 20px;
-    border: 1px solid;
+
+.input-consulta {
+  width: 50%;
+  height: 40px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 18px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
 }
-.boton-consulta{
-    width:300px;
-    height: 50px;
-	padding:3px 10px;
-	display:inline-block;
-    font-size: 20px;
-    margin: 20px;
-    box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
-	border: 1px solid #5f0909; /* Borde */
-	background: #131753;  /* Fondo */
-	text-align: center;  /* Alineación del texto */
-	text-shadow: -1px -1px rgba(0,0,0,.2);  /* Sombra del texto */
-	border-radius: 5px;  /* Bordes redondos */
-	color: white;  /* Color del texto */
+
+.boton-consulta {
+  width: 50%;
+  height: 40px;
+  padding: 5px 10px;
+  margin: 8px 0;
+  font-size: 18px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
 }
-.boton-consulta:hover{
-    color:red;
+
+.boton-consulta:hover {
+  color: red;
+  background: #1f2a7b;
+}
+
+.table-contenedor {
+  position: relative;
+  right: 50px;
+  width: 120%;
+  max-width: 600px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+}
+
+.table-registros {
+  width: 100%;
+  border: 1px solid black;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.table-registros th,
+.table-registros td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table-registros th {
+  background-color: rgb(174, 189, 247);
+  color: white;
+}
+
+.table-registros caption {
+  caption-side: bottom;
+}
+
+@media (max-width: 600px) {
+  .table-contenedor {
+    width: 100%;
+    padding: 10px;
+  }
 }

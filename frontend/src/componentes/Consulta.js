@@ -1,12 +1,13 @@
 import React from "react";
 import "../css/Consulta.css";
+
 function Consulta() {
   const clic = () => {
     alert("Consulta Prueba");
   };
   return (
     <div className="contenedor-consulta">
-      <h1 className="titulo-consulta">Consulta</h1>
+      <h1 className="titulo-consulta">Consulta por usuario</h1>
       <div className="busqueda-actividades">
         <input
           className="input-consulta"
@@ -16,11 +17,28 @@ function Consulta() {
         <button className="boton-consulta" type="submit" onClick={clic}>
           Consulta
         </button>
-        <h1>Otro</h1>
+        <h2>Registros</h2>
+        <div className="table-contenedor">
+          <table className="table-registros">
+            <thead className="table-head">
+              <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Actividad</th>
+                <th>Fecha</th>
+                <th>Hora_I</th>
+                <th>Hora_F</th>
+              </tr>
+            </thead>
+            <tbody className="table-body">
+              <tr><td></td></tr>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
 }
-
 
 export default Consulta;
