@@ -4,7 +4,7 @@ const conexion = mysql.createConnection({
     host: "db-main.cpci4oeysiib.us-east-1.rds.amazonaws.com",
     database: "db_actividad",
     user: "admin",
-    password: "1234568"
+    password: "12345678"
 });
 
 conexion.connect((err) => {
