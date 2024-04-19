@@ -1,10 +1,10 @@
-import mysql from 'mysql';
+import mysql from 'mysql2';//mysql para AWS
 
 const conexion = mysql.createConnection({
-    host: "db-main.cpci4oeysiib.us-east-1.rds.amazonaws.com",
+    host: "localhost",
     database: "db_actividad",
-    user: "admin",
-    password: "12345678"
+    user: "root",//para AWS admin
+    password: "admin" //para AWS 12345678
 });
 
 conexion.connect((err) => {
