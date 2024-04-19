@@ -20,6 +20,6 @@ app.get('/consulta', function(req, res){
     res.sendFile(dir_front + "/frontend/build/index.html")
 });
 
-app.listen(5500,()=>{
+app.listen(8080,()=>{
     console.log("Server Started");
 });
