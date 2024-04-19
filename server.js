@@ -1,5 +1,6 @@
 import ex from 'express';
 import dir from 'path';
+import './db.js';
 
 const app = ex()
 const dir_front = dir.resolve()
@@ -19,6 +20,6 @@ app.get('/consulta', function(req, res){
     res.sendFile(dir_front + "/frontend/build/index.html")
 });
 
-app.listen(8080,()=>{
+app.listen(5500,()=>{
     console.log("Server Started");
 });
