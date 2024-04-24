@@ -15,12 +15,14 @@ conexion.connect((err) => {
     }
 });
 
-export function insert(nombre_usuario, actividad, fecha, hora_inicio, hora_final){
-    conexion.query("INSERT INTO records VALUES (" + nombre_usuario + ",'" + actividad + "','" + fecha + "','" + hora_inicio + "','" + hora_final + "')",function(err,result){
+let insert = (usuario, actividad, fecha, horai, horaf) =>{
+    conexion.query("INSERT INTO registros (usuario, actividad, fecha, horai, horaf) VALUES ('"+usuario+"','"+actividad+"','"+fecha+"','"+horai+"','"+horaf+"' )", function(err,res){
         if(err){
-            console.log(err)
+            console.error("Error al registrar el empleado: ", err);
         }else{
-            console.log("Registro exitoso")
+            console.log("Empleado registrado con éxito");
         }
     })
 }
+
+export default insert
