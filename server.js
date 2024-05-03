@@ -31,8 +31,15 @@ app.post("/registro_actividades", (req, res) => {
 });
 
 app.get("/consulta_actividades", (req, res) => {
-    select();
-});
+    select((err, registros) => {
+      if (err) {
+        console.error("Error al realizar la consulta: ", err);
+        res.status(500).send("Error al realizar la consulta");
+      } else {
+        res.send(registros);
+      }
+    });
+  });
 
 app.listen(8080,()=>{
     console.log("Server Started");

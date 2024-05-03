@@ -4,7 +4,7 @@ const conexion = mysql.createConnection({
     host: "localhost",
     database: "db_actividad",
     user: "root",//para AWS admin
-    password: "12345678" //para AWS 12345678
+    password: "admin" //para AWS 12345678
 });
 
 conexion.connect((err) => {
@@ -25,13 +25,15 @@ export const insert = (usuario, actividad, fecha, horai, horaf) =>{
     })
 }
 
-export const select = () =>{
-    conexion.query("SELECT * FROM registros", function(err,res){
-        if(err){
-            console.error("Error al realizar la consulta:  ", err);
-        }else{
-            console.log("Registros obtenidos con éxito:");
-            console.log(res); 
-        }
-    })
-}
+export const select = (callback) => {
+    conexion.query("SELECT * FROM registros", function (err, res) {
+      if (err) {
+        console.error("Error al realizar la consulta: ", err);
+        callback(err, null);
+      } else {
+        console.log("Registros obtenidos con éxito:");
+        console.log(res);
+        callback(null, res);
+      }
+    });
+  };
