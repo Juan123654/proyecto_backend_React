@@ -1,6 +1,6 @@
 import ex from 'express';
 import dir from 'path';
-import insert from './db.js';
+import {insert,select} from './db.js';
 
 const app = ex()
 const dir_front = dir.resolve()
@@ -28,6 +28,10 @@ app.get('/consulta', function(req, res){
 app.post("/registro_actividades", (req, res) => {
     let { usuario, actividad, fecha, horai, horaf } = req.body;
     insert(usuario, actividad, fecha, horai, horaf);
+});
+
+app.get("/consulta_actividades", (req, res) => {
+    select();
 });
 
 app.listen(8080,()=>{

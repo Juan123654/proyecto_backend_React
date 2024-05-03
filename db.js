@@ -4,7 +4,7 @@ const conexion = mysql.createConnection({
     host: "localhost",
     database: "db_actividad",
     user: "root",//para AWS admin
-    password: "admin" //para AWS 12345678
+    password: "12345678" //para AWS 12345678
 });
 
 conexion.connect((err) => {
@@ -15,7 +15,7 @@ conexion.connect((err) => {
     }
 });
 
-let insert = (usuario, actividad, fecha, horai, horaf) =>{
+export const insert = (usuario, actividad, fecha, horai, horaf) =>{
     conexion.query("INSERT INTO registros (usuario, actividad, fecha, horai, horaf) VALUES ('"+usuario+"','"+actividad+"','"+fecha+"','"+horai+"','"+horaf+"' )", function(err,res){
         if(err){
             console.error("Error al registrar el empleado: ", err);
@@ -25,4 +25,13 @@ let insert = (usuario, actividad, fecha, horai, horaf) =>{
     })
 }
 
-export default insert
+export const select = () =>{
+    conexion.query("SELECT * FROM registros", function(err,res){
+        if(err){
+            console.error("Error al realizar la consulta:  ", err);
+        }else{
+            console.log("Registros obtenidos con éxito:");
+            console.log(res); 
+        }
+    })
+}

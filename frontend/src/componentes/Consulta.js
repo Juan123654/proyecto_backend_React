@@ -2,19 +2,17 @@ import React from "react";
 import "../css/Consulta.css";
 
 function Consulta() {
-  const clic = () => {
-    alert("Consulta Prueba");
-  };
   return (
     <div className="contenedor-consulta">
-      <h1 className="titulo-consulta">Consulta por usuario</h1>
+      <h1 className="titulo-consulta">Listar Registros</h1>
+      <form className="consulta-registros" action="/consulta_actividades" method="get">
       <div className="busqueda-actividades">
         <input
           className="input-consulta"
           type="text"
           placeholder="Nombre Usuario"
         ></input>
-        <button className="boton-consulta" type="submit" onClick={clic}>
+        <button className="boton-consulta" type="submit" >
           Consulta
         </button>
         <h2>Registros</h2>
@@ -37,6 +35,7 @@ function Consulta() {
           </table>
         </div>
       </div>
+      </form>
     </div>
   );
 }
