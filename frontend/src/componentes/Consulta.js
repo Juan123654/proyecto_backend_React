@@ -24,7 +24,7 @@ function Consulta() {
         onSubmit={getRegistros} // Usar onSubmit en lugar de onClick para el formulario
       >
         <div className="busqueda-actividades">
-          <button className="boton-consulta" type="submit">
+          <button className="boton-consulta" type="submit" id="2">
             Consulta
           </button>
           <h2>Registros</h2>
