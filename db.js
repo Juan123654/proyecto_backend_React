@@ -32,7 +32,6 @@ export const select = (callback) => {
         callback(err, null);
       } else {
         console.log("Registros obtenidos con éxito:");
-        console.log(res);
         callback(null, res);
       }
     });
